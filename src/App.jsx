@@ -1,16 +1,25 @@
-import { useState } from 'react'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 import NavBar from "./components/NavBar/NavBar"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
-
-
-function App() {
-  const [count, setCount] = useState(0)
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Nosotros from './components/Nosotros/nosotros';
+import Carrito from './components/Carrito/carrito';
+const App=()=> {
+  
 
   return (
      <>
-      <ItemListContainer saludo={"Hola bienvenidos a la cerveceria"} edad={"24"}/> 
- <NavBar/>
+     <BrowserRouter>
+      <NavBar/>
+     <Routes>
+      <Route path='/Carrito' element={<Carrito/>}/>
+      <Route path='/Nosotros' element={<Nosotros/>}/>
+      <Route path='/' element={<ItemListContainer/>}/>
+      <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
+     </Routes>
+     </BrowserRouter>
     </> 
   )
 }
