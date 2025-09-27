@@ -1,6 +1,6 @@
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
+import { CarritoProvider } from './context';
 import NavBar from "./components/NavBar/NavBar"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
@@ -12,7 +12,7 @@ const App=()=> {
   return (
      <>
      <BrowserRouter>
-      <NavBar/>
+     <NavBar/>
      <Routes>
       <Route path='/Carrito' element={<Carrito/>}/>
       <Route path='/Nosotros' element={<Nosotros/>}/>
