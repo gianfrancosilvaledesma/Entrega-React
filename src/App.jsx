@@ -12,6 +12,7 @@ const App=()=> {
   return (
      <>
      <BrowserRouter>
+     <CarritoProvider>
      <NavBar/>
      <Routes>
       <Route path='/Carrito' element={<Carrito/>}/>
@@ -19,6 +20,7 @@ const App=()=> {
       <Route path='/' element={<ItemListContainer/>}/>
       <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
      </Routes>
+     </CarritoProvider>
      </BrowserRouter>
     </> 
   )
