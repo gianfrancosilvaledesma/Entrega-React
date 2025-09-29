@@ -14,8 +14,17 @@ border-radius: 4px;
 
 li{
     display: inline-block;
+    color: inherit;
     align-items:last baseline;
     justify-content: flex-end;
     margin: 10px;
     cursor: pointer;
+    text-decoration:none;
+}
+.nav-link{
+    text-decoration: none;  
+    text-rendering: geometricPrecision;
+  color: black;         
+  font-weight: bold;      
+  padding: 8px 12px;      
 }

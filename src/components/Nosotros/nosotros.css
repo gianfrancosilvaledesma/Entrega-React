@@ -1,3 +1,7 @@
 body{
-    background-color: blue;
+    background-color: blue;;
+}
+.parrafo {
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

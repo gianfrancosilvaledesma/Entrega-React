@@ -3,7 +3,7 @@ const Nosotros = () => {
   return (
     <>
     <h1>Nosotros: Nuestra Historia</h1>
-    <p>En el corazón de la ciudad, donde el aroma a malta tostada se mezcla con las charlas entre amigos, nació La Carbonera.
+    <p className="parrafo">En el corazón de la ciudad, donde el aroma a malta tostada se mezcla con las charlas entre amigos, nació La Carbonera.
 Inspirada en las viejas carbonerías que encendían la vida de los barrios, nuestra cervecería surge con la idea de recuperar ese espíritu: un lugar cálido, auténtico y lleno de energía compartida.
 
 Todo comenzó con un grupo de amigos apasionados por la cerveza artesanal. Entre recetas caseras, noches de pruebas y un sinfín de anécdotas, descubrimos que no solo queríamos elaborar cerveza: queríamos crear un espacio donde cada pinta contara una historia y cada visita se transformara en un recuerdo.
