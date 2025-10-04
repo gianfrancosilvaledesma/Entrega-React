@@ -14,6 +14,7 @@ const ItemDetailContainer = () => {
   // }, [idItem]);
 
   useEffect(()=>{
+    console.log("idItem desde URL:", idItem);
     const nuevoDoc = doc(db,"productos", idItem)
 
     

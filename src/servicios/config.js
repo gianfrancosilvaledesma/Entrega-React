@@ -18,7 +18,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+ export const db = getFirestore(app);
 
 
 
@@ -38,7 +38,7 @@ const subirProductos = async () => {
 
   // Recorre el array de productos
   misProductos.forEach((producto) => {
-    const nuevoDoc = doc(productosRef); // Crea un nuevo documento con un ID automático
+    const nuevoDoc = doc(productosRef, producto.id.toString()); // Crea un nuevo documento con un ID automático
     batch.set(nuevoDoc, producto); // Agrega la operación de escritura al batch
   });
 
@@ -50,4 +50,4 @@ const subirProductos = async () => {
     console.error("Error subiendo productos: ", error);
   }
 };
-//  subirProductos() 
+//   subirProductos()
