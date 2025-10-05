@@ -1,0 +1,8 @@
+.carrito img{ 
+    width: 150px;
+    object-fit: contain;
+}
+
+.foto{
+    width: 500px;
+}

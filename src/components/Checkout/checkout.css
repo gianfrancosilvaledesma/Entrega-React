@@ -1,0 +1,8 @@
+.formulario div {
+  margin-bottom: 12px; /* espacio entre cada grupo */
+}
+
+.formulario label {
+  display: block;      /* fuerza que el label quede arriba del input */
+  margin-bottom: 4px;  /* espacio entre el label y el input */
+}

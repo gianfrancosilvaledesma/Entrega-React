@@ -1,8 +1,11 @@
 import React, { useContext } from 'react'
 import { CarritoContext } from '../../context'
 import { useState } from 'react'
-// import {db} from "../../services/config"
-// import { collection, addDoc } from 'firebase/firestore'
+ import { db } from '../../servicios/config'
+ import { collection, addDoc } from 'firebase/firestore'
+import "./checkout.css"
+import Stack from 'react-bootstrap/Stack';
+import Button from 'react-bootstrap/Button';
 
 
 const Checkout = () => {
@@ -66,7 +69,8 @@ const Checkout = () => {
   return (
     <div>
         <h2>Checkout:</h2>
-        <form onSubmit={manejadorFormulario}>
+        <Stack gap={2} className="col-md-5 mx-auto">
+        <form className='formulario' onSubmit={manejadorFormulario}>
             <div>
                 <label htmlFor="">Nombre</label>
                 <input type="text" onChange={(e)=> setNombre(e.target.value)}/>
@@ -92,13 +96,14 @@ const Checkout = () => {
                 error && <p style={{color:"red"}}> {error} </p>
             }
 
-            <button type='submit'>Confirmar Compra</button>
+            <Button variant="secondary" type='submit'>Confirmar Compra</Button>
             
             {
                 ordenId && ( <strong> Gracias por tu compra!! Tu numero de orden es: {ordenId}</strong>)
             }
 
         </form>
+        </Stack>
     </div>
   )
 }
