@@ -2,6 +2,8 @@ import { useContext } from "react"
 import { CarritoContext } from "../../context"
 import { Link } from "react-router-dom"
 import "./carrito.css"
+import "../NavBar/NavBar.css"
+import Button from 'react-bootstrap/Button';
 
 const Cart = () => {
 
@@ -12,7 +14,7 @@ const Cart = () => {
             <>
                 <h2>Por el momento no has comprado nada</h2>
                 <img className="foto" src="../public/img/carrito.jpg.webp" alt="" />
-                <h3><Link to="/"> Ver Productos</Link></h3>
+                <h3><Button variant="info"><Link to="/"className="nav-link"> Ver Productos</Link></Button></h3>
             </>
         )
     }

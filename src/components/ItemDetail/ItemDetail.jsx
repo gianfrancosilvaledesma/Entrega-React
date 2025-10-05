@@ -4,6 +4,8 @@ import { Link } from "react-router-dom"
 import Contador from "../Contador/Contador"
 import { CarritoContext } from '../../context'
 import { useContext } from 'react'
+import "../NavBar/NavBar.css"
+import Button from 'react-bootstrap/Button';
 
 
  const ItemDetail = ({id, nombre, precio, img}) => {
@@ -29,7 +31,7 @@ const { agregarProducto } = useContext(CarritoContext);
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sit exercitationem ab non perspiciatis reprehenderit facere! Quae perspiciatis laudantium officia? Minus, facilis molestias? Ex et eos nisi illum alias suscipit!</p>
     
   {agregarCantidad > 0 ? (
-        <Link to="/Carrito">Ir al carrito</Link>
+       <p><Button variant='outline-danger'><Link to="/Carrito"className='nav-link'>Ir al carrito</Link></Button></p>
       ) : (
         <Contador inicial={1} stock={10} onAdd={manejadorCantidad} />
       )}
