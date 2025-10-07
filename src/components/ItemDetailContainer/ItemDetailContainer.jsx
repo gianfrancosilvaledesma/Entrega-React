@@ -4,6 +4,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "../../servicios/config";
 import { getDoc, doc } from "firebase/firestore";
+import Cargador from "../Cargador/Cargador";
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
 
@@ -37,7 +38,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      {producto ? <ItemDetail {...producto} /> : <p>Cargando...</p>}
+      {producto ? <ItemDetail {...producto} /> : <Cargador /> }
       {/* <ItemDetail {...producto} /> */}
     </div>
   );

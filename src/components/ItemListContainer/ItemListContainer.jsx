@@ -3,7 +3,7 @@ import { db } from "../../servicios/config"
 import { collection, getDocs, query, where } from "firebase/firestore"
 import ItemList from "../ItemList/ItemList"
  import { useParams } from "react-router-dom"
-
+import Cargador from "../Cargador/Cargador"
 
 // const ItemListContainer = () => {
 //   const [productos, setProductos] = useState ([])
@@ -41,7 +41,8 @@ import ItemList from "../ItemList/ItemList"
   return (
  <>
     <h1>Cervezas a tu gusto</h1>
-    <ItemList productos={productos}/>
+     { loading ? <Cargador/> : <ItemList productos={productos}/> }
+    {/* <ItemList productos={productos}/> */}
 
     </>
   )
