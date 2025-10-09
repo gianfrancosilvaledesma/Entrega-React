@@ -13,7 +13,7 @@ const Cart = () => {
         return (
             <>
                 <h2>Por el momento no has comprado nada</h2>
-                <img className="foto" src="../public/img/carrito.jpg.webp" alt="" />
+                <img className="foto" src="img/carrito.jpg.webp" alt="Carrito" />
                 <h3><Button variant="info"><Link to="/"className="nav-link"> Ver Productos</Link></Button></h3>
             </>
         )

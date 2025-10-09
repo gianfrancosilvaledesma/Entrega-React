@@ -8,7 +8,7 @@ import "../NavBar/NavBar.css"
 import Button from 'react-bootstrap/Button';
 
 
- const ItemDetail = ({id, nombre, precio, img}) => {
+ const ItemDetail = ({id, nombre, precio, img, descripcion}) => {
      
   const [agregarCantidad, setAgregarCantidad] = useState(0)
 
@@ -18,7 +18,7 @@ const { agregarProducto } = useContext(CarritoContext);
     setAgregarCantidad(cantidad);
   //   console.log("Productos agregados: " + cantidad)
 
-    const item = { id, nombre, precio, img };
+    const item = { id, nombre, precio, img, descripcion };
     agregarProducto(item, cantidad);
    }
 
@@ -28,7 +28,7 @@ const { agregarProducto } = useContext(CarritoContext);
         <h3>Precio: {precio}</h3>
         <h3>ID: {id}</h3>
         <img src={img} alt={nombre} />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sit exercitationem ab non perspiciatis reprehenderit facere! Quae perspiciatis laudantium officia? Minus, facilis molestias? Ex et eos nisi illum alias suscipit!</p>
+        <p>{descripcion}</p>
     
   {agregarCantidad > 0 ? (
        <p><Button variant='outline-danger'><Link to="/Carrito"className='nav-link'>Ir al carrito</Link></Button></p>

@@ -26,10 +26,10 @@ const app = initializeApp(firebaseConfig);
 import { collection, doc, writeBatch } from "firebase/firestore"; 
 
 const misProductos = [
-    {id: 1, nombre: "Cerveza Rubia", precio: 300, img:"../public/img/cerveza-rubia-resized.webp"},
-    {id: 2, nombre: "Cerveza Roja", precio: 250, img:"../public/img/una-cerveza-roja-resized.png"},
-    {id: 3, nombre: "Cerveza Negra", precio: 310, img:"../public/img/una-cerveza-negra-resized.png"},
-    {id: 4, nombre: "Cerveza Ipa", precio: 900, img:"../public/img/una-cerveza-ipa-resized.png"},
+    {id: 1, nombre: "Cerveza Rubia", precio: 300, img:"/img/cerveza-rubia-resized.webp"},
+    {id: 2, nombre: "Cerveza Roja", precio: 250, img:"/img/una-cerveza-roja-resized.png"},
+    {id: 3, nombre: "Cerveza Negra", precio: 310, img:"/img/una-cerveza-negra-resized.png"},
+    {id: 4, nombre: "Cerveza Ipa", precio: 900, img:"img/una-cerveza-ipa-resized.png"},
 ]
 
 const subirProductos = async () => {
@@ -50,4 +50,4 @@ const subirProductos = async () => {
     console.error("Error subiendo productos: ", error);
   }
 };
-//   subirProductos()
+//  subirProductos()
