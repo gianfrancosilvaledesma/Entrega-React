@@ -4,10 +4,27 @@ import { Link } from "react-router-dom"
 import "./carrito.css"
 import "../NavBar/NavBar.css"
 import Button from 'react-bootstrap/Button';
+import { toast,Zoom } from "react-toastify"
+
 
 const Cart = () => {
+    const {carrito, vaciarCarrito, total, cantidadTotal,eliminarProducto} = useContext(CarritoContext)
 
-    const {carrito, vaciarCarrito, total, cantidadTotal} = useContext(CarritoContext)
+    
+  const toastEliminado = (id, nombre) => {
+    eliminarProducto(id);
+toast.warn('Eliminaste el producto', {
+position: "top-center",
+autoClose: 3000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+transition: Zoom,
+});
+  };
 
     if(cantidadTotal === 0) {
         return (
@@ -30,7 +47,8 @@ const Cart = () => {
           <p>Cantidad: {prod.cantidad}</p>
           <p>Precio unitario: ${prod.item.precio}</p>
           <p>Subtotal: ${prod.item.precio * prod.cantidad}</p>
-          <button onClick={() => eliminarProducto(prod.item.id)}>Eliminar</button>
+          <button onClick={() => toastEliminado(prod.item.id)}>Eliminar</button>
+          
         </div>
       ))}
       <h3>Total: ${total}</h3>

@@ -6,6 +6,7 @@ import { CarritoContext } from '../../context'
 import { useContext } from 'react'
 import "../NavBar/NavBar.css"
 import Button from 'react-bootstrap/Button';
+import { toast, Zoom } from 'react-toastify'
 
 
  const ItemDetail = ({id, nombre, precio, img, descripcion}) => {
@@ -20,6 +21,17 @@ const { agregarProducto } = useContext(CarritoContext);
 
     const item = { id, nombre, precio, img, descripcion };
     agregarProducto(item, cantidad);
+    toast.success('producto agregado!', {
+position: "top-center",
+autoClose: 3000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+transition: Zoom,
+})
    }
 
   return (

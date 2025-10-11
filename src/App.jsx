@@ -9,6 +9,8 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Nosotros from './components/Nosotros/nosotros';
 import Carrito from './components/Carrito/carrito';
 import  'bootstrap/dist/css/bootstrap.min.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const App=()=> {
   
 
@@ -26,6 +28,7 @@ const App=()=> {
      </Routes>
      <Footer/>
      </CarritoProvider>
+     <ToastContainer/>
      </BrowserRouter>
     </> 
   )
