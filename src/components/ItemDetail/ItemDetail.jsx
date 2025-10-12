@@ -1,5 +1,6 @@
  import React from 'react'
 import { useState } from "react"
+import "./ItemDetail.css"
 import { Link } from "react-router-dom"
 import Contador from "../Contador/Contador"
 import { CarritoContext } from '../../context'
@@ -40,7 +41,7 @@ transition: Zoom,
         <h3>Precio: {precio}</h3>
         <h3>ID: {id}</h3>
         <img src={img} alt={nombre} />
-        <p>{descripcion}</p>
+        <p className='detalle'>{descripcion}</p>
     
   {agregarCantidad > 0 ? (
        <p><Button variant='outline-danger'><Link to="/Carrito"className='nav-link'>Ir al carrito</Link></Button></p>

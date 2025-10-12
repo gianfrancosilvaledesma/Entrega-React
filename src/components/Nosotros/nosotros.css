@@ -2,6 +2,8 @@ body{
     background-color: blue;;
 }
 .parrafo {
-    font-size: large;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: silver;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family:'Honk'
 }
