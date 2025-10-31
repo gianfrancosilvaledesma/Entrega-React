@@ -3,7 +3,7 @@ import { db } from "../../servicios/config"
 import { collection, getDocs, query, where } from "firebase/firestore"
 import ItemList from "../ItemList/ItemList"
  import { useParams } from "react-router-dom"
-import Cargador from "../Cargador/Cargador"
+import Cargador from "../Loader/Loader"
 
 // const ItemListContainer = () => {
 //   const [productos, setProductos] = useState ([])

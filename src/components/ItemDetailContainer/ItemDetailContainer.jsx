@@ -4,7 +4,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "../../servicios/config";
 import { getDoc, doc } from "firebase/firestore";
-import Cargador from "../Cargador/Cargador";
+import Cargador from "../Loader/Loader";
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
 
