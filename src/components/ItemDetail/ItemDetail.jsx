@@ -3,7 +3,7 @@ import { useState } from "react"
 import "./ItemDetail.css"
 import { Link } from "react-router-dom"
 import Contador from "../Contador/Contador"
-import { CarritoContext } from '../../context'
+import { CarritoContext } from '../../context/CarritoContext'
 import { useContext } from 'react'
 import "../NavBar/NavBar.css"
 import Button from 'react-bootstrap/Button';
