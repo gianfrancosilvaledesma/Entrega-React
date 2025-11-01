@@ -53,7 +53,7 @@ transition: Zoom,
       ))}
       <h3>Total: ${total}</h3>
       <button onClick={vaciarCarrito}>Vaciar carrito</button>
-      <p><Link to ="/Checkout"> Finalizar Compra</Link></p>
+      <p><Button variant="danger"><Link to ="/Checkout"> Finalizar Compra</Link></Button></p>
     </div>
   )
 }
