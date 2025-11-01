@@ -44,13 +44,37 @@ export const CarritoProvider = ({ children }) => {
 
   // Eliminar producto individual
   const eliminarProducto = (id) => {
-    const productoEliminado = carrito.find(prod => prod.item.id === id);
-    const carritoFiltrado = carrito.filter(prod => prod.item.id !== id);
+  const productoExistente = carrito.find(prod => prod.item.id === id);
 
+  if (!productoExistente) return;
+
+  if (productoExistente.cantidad > 1) {
+    // Resta una unidad del producto
+    const carritoActualizado = carrito.map(prod => {
+      if (prod.item.id === id) {
+        return { ...prod, cantidad: prod.cantidad - 1 };
+      } else {
+        return prod;
+      }
+    });
+    setCarrito(carritoActualizado);
+    setCantidadTotal(prev => prev - 1);
+    setTotal(prev => prev - productoExistente.item.precio);
+  } else {
+    const carritoFiltrado = carrito.filter(prod => prod.item.id !== id);
     setCarrito(carritoFiltrado);
-    setCantidadTotal(prev => prev - productoEliminado.cantidad);
-    setTotal(prev => prev - productoEliminado.item.precio * productoEliminado.cantidad);
-  };
+    setCantidadTotal(prev => prev - 1);
+    setTotal(prev => prev - productoExistente.item.precio);
+  }
+};
+  // const eliminarProducto = (id) => {
+  //   const productoEliminado = carrito.find(prod => prod.item.id === id);
+  //   const carritoFiltrado = carrito.filter(prod => prod.item.id !== id);
+
+  //   setCarrito(carritoFiltrado);
+  //   setCantidadTotal(prev => prev - productoEliminado.cantidad);
+  //   setTotal(prev => prev - productoEliminado.item.precio * productoEliminado.cantidad);
+  // };
 
   return (
     <CarritoContext.Provider value={{ carrito, total, cantidadTotal, agregarProducto, vaciarCarrito, eliminarProducto }}>
