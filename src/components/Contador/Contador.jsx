@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Contador.css"
+import "./contador.css"
 
 const Contador = ({ inicial, stock, onAdd }) => {
   const [cantidad, setCantidad] = useState(inicial);
