@@ -17,4 +17,9 @@ Este es un proyectode ecommerce que se utiliza para el curso de React JS. La apl
 
 Dominio de Sitio:
 
-https://precious-concha-f831f9.netlify.app/
+https://entrega-react-ashen.vercel.app/
+
+### Por favor Leer:
+
+El proyecto se encuentra todo en la rama "nueva-rama", por favor desestimen la rama "main" ya que es una rama incompleta.
+
