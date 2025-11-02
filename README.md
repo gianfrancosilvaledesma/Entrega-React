@@ -23,3 +23,6 @@ https://entrega-react-ashen.vercel.app/
 
 El proyecto se encuentra todo en la rama "nueva-rama", por favor desestimen la rama "main" ya que es una rama incompleta.
 
+## Firestore link:
+
+https://console.firebase.google.com/project/reactcoder-a82b7/firestore/databases/-default-/data/~2Fproductos~2F1?hl=es-419
